@@ -1,3 +1,38 @@
+# HOW TO RUN THE APP
+
+## Build
+
+```
+mvn clean install
+```
+
+## Run
+
+You can run the `docker-compose.yml` file with `docker compose up -d` command and it will run all the necessary
+applications in docker.
+
+**Alternatively, if you have other applications running already, you can run only the server with below docker build +
+run commands.**
+
+## Test
+
+You can use Postman to test the application. There is a sample postman
+collection `Katanox Assignment.postman_collection.json` in the project that can be imported to Postman.
+
+## Build docker image
+
+```
+docker build --no-cache -t katanox-api .
+```
+
+You will have `katanox-api` docker image after build.
+
+## Run docker image
+
+```
+docker run --name katanox-api -p 8081:8081 -e "SPRING_PROFILES_ACTIVE=docker" katanox-api
+```
+
 # Katanox Coding Challenge
 
 The aim of this task is to refactor and extend an API using Java OR Kotlin and Spring Boot which allows users to search

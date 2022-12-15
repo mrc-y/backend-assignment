@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "21b1288b-464e-4218-be16-8acc2b63bd1d",
+		"name": "Katanox Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18869032"
+	},
+	"item": [
+		{
+			"name": "search hotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotelId\": 1,\r\n    \"checkin\": \"2022-03-01\",\r\n    \"checkout\": \"2022-03-04\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/search/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"search",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotelId\": 1,\r\n    \"roomId\": 1,\r\n    \"price\": 408.45,\r\n    \"currency\": \"EUR\",\r\n    \"guest\": {\r\n        \"name\": \"abv\",\r\n        \"surname\": \"ac\",\r\n        \"birthdate\":\"2000-03-01\"\r\n    },\r\n    \"payment\": {\r\n        \"cardHolder\": \"a\",\r\n        \"cardNumber\": \"b\",\r\n                \"cvv\": \"b\",\r\n        \"expiryMonth\": \"b\",\r\n        \"expiryYear\": \"b\"\r\n\r\n    },\r\n    \"checkin\": \"2022-03-01\",\r\n    \"checkout\": \"2022-03-04\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/booking/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"booking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get booking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/booking/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"booking",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
